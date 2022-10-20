@@ -80,3 +80,10 @@ prevBtn.addEventListener("click", function () {
 
   showPerson(randomReview);
 });
+
+// show random user
+randomBtn.addEventListener("click", function () {
+  const randomUser = Math.floor(Math.random() * reviews.length);
+
+  showPerson(randomUser);
+});
