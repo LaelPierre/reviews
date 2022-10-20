@@ -40,3 +40,16 @@ const info = document.querySelector("#info");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 const randomBtn = document.querySelector(".random-btn");
+
+// setup random person
+let randomReview = 0;
+
+// load random person at loading page
+window.addEventListener("DOMContentLoaded", function () {
+  const person = reviews[0];
+
+  img.src = person.img;
+  name.textContent = person.name;
+  job.textContent = person.job;
+  info.textContent = person.text;
+});
