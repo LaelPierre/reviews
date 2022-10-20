@@ -46,10 +46,26 @@ let randomReview = 0;
 
 // load random person at loading page
 window.addEventListener("DOMContentLoaded", function () {
-  const person = reviews[0];
+  showPerson(randomReview);
+});
+
+// refactor showing a person
+function showPerson(user) {
+  const person = reviews[user];
 
   img.src = person.img;
   name.textContent = person.name;
   job.textContent = person.job;
   info.textContent = person.text;
+}
+
+// next btn
+nextBtn.addEventListener("click", function () {
+  randomReview++;
+
+  if (randomReview > reviews.length - 1) {
+    randomReview = 0;
+  }
+
+  showPerson(randomReview);
 });
