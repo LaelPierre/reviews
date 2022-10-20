@@ -69,3 +69,14 @@ nextBtn.addEventListener("click", function () {
 
   showPerson(randomReview);
 });
+
+// prev btn
+prevBtn.addEventListener("click", function () {
+  randomReview--;
+
+  if (randomReview < 0) {
+    randomReview = reviews.length - 1;
+  }
+
+  showPerson(randomReview);
+});
